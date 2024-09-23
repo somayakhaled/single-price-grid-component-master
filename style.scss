@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Karla:ital,wght@0,200..800;1,200..800&display=swap');
+
+$Cyan: hsl(179, 62%, 43%);
+$Bright_Yellow: hsl(71, 73%, 54%);
+$Light_Gray: hsl(204, 43%, 93%);
+$Grayish_Blue: hsl(218, 22%, 67%);
+
+body{
+    font-family: "Karla", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 16px;
+    min-height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: $Light_Gray;
+}
+
+.container{
+    display: grid;  
+    grid-template-rows: auto  auto;  
+    grid-template-columns: 1fr 1fr;
+    width: 630px;
+    box-shadow: 0 10px 20px 10px rgb(218, 218, 218);
+    border-radius: 8px;
+    overflow: hidden;
+   
+    .section1{
+        grid-column: span 2;  
+        display: flex;
+        flex-direction: column;
+        background-color: white;
+        padding: 30px;
+        
+        h2{
+            color: $Cyan;
+        }
+
+        div{
+            color: $Bright_Yellow;
+            font-weight: 700;
+            font-size: 18px;
+        }
+
+        p{
+            color: $Grayish_Blue;
+            line-height: 25px;
+        }
+    }
+
+    .section2{ 
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+        background-color: $Cyan;
+        color: $Light_Gray;
+        padding: 30px 30px 30px 40px;
+
+        h3{
+            margin-bottom: 0;
+        }
+
+        div{
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            font-size: 30px;
+            font-weight: 700;
+
+            span{
+                color: #84d6d5;
+                font-size: 15px;
+                font-weight: 400;
+            }
+        }
+
+        p{
+            margin-top: -10px; 
+        }
+
+        button{
+            background-color: $Bright_Yellow;
+            border: none;
+            color: $Light_Gray;
+            font-weight: 700;
+            font-size: 16px;
+            height: 50px;
+            width: 240px;
+            border-radius: 4px;
+            cursor: pointer;
+            box-shadow: 0 5px 20px 5px rgba(0, 0, 0, 0.162);
+        }
+    }
+
+    .section3{
+        color: $Light_Gray;
+        background-color: #4ABEBD;
+        padding: 20px;
+
+        h3{
+            padding-left: 20px;
+        }
+
+        ul{
+            list-style-type: none;
+            padding-left: 20px;
+            font-size: 14px;
+            line-height: 20px;
+        }
+    }
+}
+
+@media (max-width: 375px){
+    .container{
+        display: flex;
+        flex-direction: column;
+    }
+}
